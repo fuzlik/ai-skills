@@ -23,6 +23,7 @@ description: >-
 - [ ] Scope: имя проекта, папка (по умолчанию Desktop), стек (по умолчанию Vite + React)
 - [ ] Plane: ровно 1 проект
 - [ ] Local: scaffold + npm install (если код)
+- [ ] Frontend: Alabuga UI kit (см. skill alabuga-ui-kit) — если React/frontend
 - [ ] Git: init + initial commit
 - [ ] GitHub: gh repo create + push -u
 - [ ] Отчёт: Plane name/id, GitHub URL, локальный путь
@@ -44,6 +45,18 @@ description: >-
 - Стек по умолчанию: `npm create vite@latest <имя> -- --template react` + `npm install`
 - Если пользователь назвал другой стек — использовать его
 - Не коммитить `node_modules`
+
+### 2.1. Alabuga UI kit (обязательно для React/frontend)
+
+Для любого нового React/frontend-проекта сразу подключи UI-библиотеку Alabuga — **не спрашивать**, какую брать. Детали и быстрый старт: skill `alabuga-ui-kit`.
+
+Минимум:
+
+1. Настроить приватный реестр (`.npmrc` + `${NPM_TOKEN}`), если пакет ещё не доступен публично.
+2. Установить пакет (`@games-alabuga/ui-kit-dev-redesign` / импорты из `@games-alabuga/ui-kit` — как в skill).
+3. Импорт стилей: `import "@games-alabuga/ui-kit/styles.css"`.
+4. Обернуть приложение в `UIKitProvider`.
+5. Убрать конфликтующие global CSS (reset/normalize, жёсткие стили на button/input/заголовки, `!important`, старые CSS variables), чтобы не перебивать Tailwind и библиотеку.
 
 ## 3. GitHub-репа
 
